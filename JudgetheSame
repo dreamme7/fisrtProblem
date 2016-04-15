@@ -1,0 +1,37 @@
+package com.dlk.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tese11 {
+
+	public static void main(String[] args) {
+		List<Integer> num = new ArrayList<Integer>();
+		num.add(1);
+		num.add(1);
+		num.add(1);
+		num.add(1);
+		num.add(1);
+		
+		String excalName = "‪C://Users/lk/Desktop/比赛报名表（单项赛）－导入模板.xlsx";
+		excalName=excalName.replace(".", ";");//取Excel的名称
+		
+		String fileName = excalName.split(";")[0];
+		fileName=fileName.substring(fileName.lastIndexOf("/")+1);
+		System.out.println(fileName);
+		
+		int ab=0;//用于保存相同的个数
+		for(int l=0;l<num.size()-2;l++){
+		    if(num.get(l)==num.get(l+1)){
+		        ab+=1;
+		    }
+		}
+		if(num.size() ==ab){
+			System.out.println("每个值都相同");
+		}else{
+			System.out.println("有不同的值");
+		}
+
+	}
+
+}
