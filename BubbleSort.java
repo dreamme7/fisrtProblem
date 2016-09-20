@@ -9,7 +9,7 @@ package com.dlk.test;
 public class BubbleSort {
 
 	/**
-	 * 原始两层for循环冒泡排序
+	 * 冒泡排序
 	 * 
 	 * @param array
 	 *            传入需要排序数组
